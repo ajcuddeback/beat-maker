@@ -15,6 +15,7 @@ class DrumKit {
         this.select = document.querySelectorAll('select');
         this.muteBtns = document.querySelectorAll(".mute");
         this.tempoSlider = document.querySelector(".tempo-slider");
+        this.darkmodeSwitch = document.querySelector(".dark-mode");
     }
     activePad() {
         console.log(this)
@@ -132,6 +133,10 @@ class DrumKit {
             this.start()
         }
     }
+    updateDarkMode() {
+        const body = document.querySelector("body");
+        body.classList.toggle("dark-mode")
+    }
 };
 
 // new method call
@@ -168,4 +173,7 @@ drumKit.tempoSlider.addEventListener('input', function (e) {
 
 drumKit.tempoSlider.addEventListener('change', function (e) {
     drumKit.updateTempo(e)
+})
+drumKit.darkmodeSwitch.addEventListener("click", function () {
+    drumKit.updateDarkMode()
 })
