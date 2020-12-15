@@ -21,6 +21,7 @@ This beatmaker is my first JavaScript application using Object Oriented Programm
 - CSS
 - JavaScript
 - Animations
+- Dark Mode Option
 
 ## Website
 
