@@ -89,6 +89,29 @@
                 <div class="pad hihat-pad b7"></div>
             </div>
         </div>
+        <div class="tom-track">
+            <div class="controls">
+                <h1>Tom</h1>
+                <button data-track="3" class="mute tom-volume">
+                    <i class="fas fa-volume-mute"></i>
+                </button>
+                <select name="tom-select" id="tom-select">
+                    <option value="./sounds/tom-acoustic01.wav">Classic tom</option>
+                    <option value="./sounds/tom-808.wav">808 tom</option>
+                    <option value="./sounds/tom-acoustic02.wav">Acoustic tom</option>
+                </select>
+            </div>
+            <div class="tom">
+                <div class="pad tom-pad b0"></div>
+                <div class="pad tom-pad b1"></div>
+                <div class="pad tom-pad b2"></div>
+                <div class="pad tom-pad b3"></div>
+                <div class="pad tom-pad b4"></div>
+                <div class="pad tom-pad b5"></div>
+                <div class="pad tom-pad b6"></div>
+                <div class="pad tom-pad b7"></div>
+            </div>
+        </div>
         <button class="play">Play</button>
         <div class="tempo">
             <input type="range" class="tempo-slider" max="300" min="20" value="150">
@@ -99,6 +122,7 @@
     <audio class="kick-sound" src="./sounds/kick-classic.wav"></audio>
     <audio class="snare-sound" src="./sounds/snare-acoustic01.wav"></audio>
     <audio class="hihat-sound" src="./sounds/hihat-acoustic01.wav"></audio>
+    <audio class="tom-sound" src="./sounds/tom-acoustic01.wav"></audio>
     <script src="./script.js" async defer></script>
 </body>
 

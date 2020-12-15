@@ -69,7 +69,8 @@ svg {
 }
 .kick-pad,
 .snare-pad,
-.hihat-pad {
+.hihat-pad,
+.tom-pad {
   width: 5rem;
   height: 5rem;
   margin: 1rem 0.5rem;
@@ -85,6 +86,9 @@ svg {
 .hihat-pad {
   background: rgb(224, 194, 160);
 }
+.tom-pad {
+  background: rgb(136, 246, 136);
+}
 .kick-pad.active {
   background: rgb(59, 197, 231);
 }
@@ -93,6 +97,9 @@ svg {
 }
 .hihat-pad.active {
   background: rgb(216, 164, 105);
+}
+.tom-pad.active {
+  background: rgb(49, 200, 66);
 }
 .sequencer {
   display: flex;
@@ -104,7 +111,8 @@ svg {
 
 .hihat-track,
 .snare-track,
-.kick-track {
+.kick-track,
+.tom-track {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -113,7 +121,8 @@ svg {
 }
 .kick,
 .snare,
-.hihat {
+.hihat,
+.tom {
   display: flex;
 }
 .controls {

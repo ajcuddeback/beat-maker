@@ -6,9 +6,11 @@ class DrumKit {
         this.currentKick = './sounds/kick-classic.wav';
         this.currentSnare = './sounds/snare-acoustic01.wav';
         this.currentHihat = './sounds/hihat-acoustic01.wav';
+        this.currentTom = './sounds/tom-acoustic01.wav';
         this.kickAudio = document.querySelector('.kick-sound');
         this.snareAudio = document.querySelector('.snare-sound');
         this.hihatAudio = document.querySelector('.hihat-sound');
+        this.tomAudio = document.querySelector('.tom-sound')
         this.index = 0;
         this.bpm = 150;
         this.isPlaying = null;
@@ -35,15 +37,19 @@ class DrumKit {
                     //restarts time of current audio track
                     this.kickAudio.currentTime = 0;
                     // plays the track
-                    this.kickAudio.play()
+                    this.kickAudio.play();
                 }
                 if (bar.classList.contains('snare-pad')) {
                     this.snareAudio.currentTime = 0;
-                    this.snareAudio.play()
+                    this.snareAudio.play();
                 }
                 if (bar.classList.contains('hihat-pad')) {
                     this.hihatAudio.currentTime = 0;
-                    this.hihatAudio.play()
+                    this.hihatAudio.play();
+                }
+                if (bar.classList.contains('tom-pad')) {
+                    this.tomAudio.currentTime = 0;
+                    this.tomAudio.play();
                 }
             }
         })
@@ -89,6 +95,9 @@ class DrumKit {
             case "hihat-select":
                 this.hihatAudio.src = selectionValue;
                 break;
+            case "tom-select":
+                this.tomAudio.src = selectionValue;
+                break;
         }
     }
     mute(e) {
@@ -105,6 +114,9 @@ class DrumKit {
                 case "2":
                     this.hihatAudio.volume = 0;
                     break;
+                case "3":
+                    this.tomAudio.volume = 0;
+                    break;
             }
         } else {
             switch (muteIndex) {
@@ -116,6 +128,9 @@ class DrumKit {
                     break;
                 case "2":
                     this.hihatAudio.volume = 1;
+                    break;
+                case "3":
+                    this.tomAudio.volume = 1;
                     break;
             }
         }
